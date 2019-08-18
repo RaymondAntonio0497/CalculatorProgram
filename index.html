@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator_Exercise</title>
+        <link rel="stylesheet" href="../CSS/style-Calculator_Exercise.css">
+    </head>
+    <body>
+        <div id='calc_simple'>
+            <form name="kalkulator">
+                <input type="text" name="areakerja">
+                <br>
+                <input type="button" value=" 1 " onclick="kalkulator.areakerja.value += 1">
+                <input type="button" value=" 2 " onclick="kalkulator.areakerja.value += 2">
+                <input type="button" value=" 3 " onclick="kalkulator.areakerja.value += 3">
+                <input type="button" value=' + ' onclick='kalkulator.areakerja.value += "+"'>
+                <input type="button" value=" - " onclick="kalkulator.areakerja.value += '-'">
+                <!-- kenapa pada operator itu pake petik satu, karena kalau petik dua jadinya nutup untuk onclick, kalau mau
+                bagian value itu petik 1 dan onclick petik 1 seperti contoh pada operator tambah HANYA UNTUK MENGHINDARI PENUTUPAN CODE -->
+                <br>
+                <input type="button" value=" 4 " onclick="kalkulator.areakerja.value += 4">
+                <input type="button" value=" 5 " onclick="kalkulator.areakerja.value += 5">
+                <input type="button" value=" 6 " onclick="kalkulator.areakerja.value += 6">
+                <input type="button" value=" * " onclick="kalkulator.areakerja.value += '*'">
+                <input type="button" value=" / " onclick="kalkulator.areakerja.value += '/'">
+                <br>
+                <input type="button" value=" 7 " onclick="kalkulator.areakerja.value += 7">
+                <input type="button" value=" 8 " onclick="kalkulator.areakerja.value += 8">
+                <input type="button" value=" 9 " onclick="kalkulator.areakerja.value += 9">
+                <input type="button" value=" 0 " onclick="kalkulator.areakerja.value += 0">
+                <input type="button" value=" = " onclick="kalkulator.areakerja.value = eval(kalkulator.areakerja.value)">
+
+                <br>
+            </form>
+            <p>Coba Masukan Perhitungan yang hasilnya sama dengan 9 <button onclick="hitung()" type="button">Hitung</button>  </p>
+            <div id="status">
+                <br> <br> <br>
+                <p>Fullstack Developer Program Day-3</p>
+            </div>
+        </div>
+        <script>
+            function hitung()
+            {
+                kalkulator.areakerja.value == 9 ? alert("Ya hasilnya sama") : alert("Hasilnya tidak sama");
+            }
+        </script>
+        Test
+    </body>
+</html>
